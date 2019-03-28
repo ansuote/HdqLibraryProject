@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--指定 EditTextCountView 的最大长度-->
+    <item type="integer" name="edit_text_count_max_length">-1</item>
+</resources>
