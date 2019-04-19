@@ -8,6 +8,14 @@
                  android:supportsRtl="true"
     >
 
+        <receiver
+            android:name="ecall.moudle.mediabtn.MediaButtonReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter android:priority="2147483647">
+                <action android:name="android.intent.action.MEDIA_BUTTON"/>
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>
