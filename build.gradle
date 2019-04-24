@@ -54,6 +54,8 @@ ext {
     minSdkVersion = 16
     targetSdkVersion = 27
 
+    hdqLibraryVersionName = '1.2'
+
     // App dependencies
     supportLibraryVersion = '27.1.1'
     loggerVersion = '2.1.1'
