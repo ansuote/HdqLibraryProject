@@ -21,7 +21,7 @@ import com.lkl.ansuote.hdqlibrary.R
  * @author huangdongqiang
  * @date 12/02/2019
  */
-class EditTextCountView @JvmOverloads constructor(context: Context? = null, attrs: AttributeSet? = null, defStyleAttr: Int = R.attr.editTextStyle): EditText(context, attrs, defStyleAttr) {
+class EditTextCountView @JvmOverloads constructor(context: Context? = null, attrs: AttributeSet? = null, defStyleAttr: Int = android.support.v7.appcompat.R.attr.editTextStyle): android.support.v7.widget.AppCompatEditText(context, attrs, defStyleAttr) {
     private var mCountPaint: Paint
     private var mWidth: Float = 0f
     private var mHeight: Float = 0f

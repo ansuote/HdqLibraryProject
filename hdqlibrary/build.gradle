@@ -6,7 +6,7 @@ apply plugin: 'kotlin-android'
 //apply plugin: 'com.neenbedankt.android-apt'
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
-
+    namespace 'com.lkl.ansuote.hdqlibrary'
     defaultConfig {
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
@@ -14,7 +14,7 @@ android {
         versionName rootProject.ext.hdqLibraryVersionName
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-
+        android.buildFeatures.buildConfig true
 //        jackOptions {
 //            enabled true
 //        }
@@ -28,8 +28,8 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_17 // VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_17 // VERSION_1_8
     }
 
 //    productFlavors {
@@ -38,7 +38,6 @@ android {
 //        }
 //    }
     publishNonDefault true
-    buildToolsVersion '27.0.3'
 }
 
 //configurations {
@@ -166,7 +165,13 @@ dependencies {
     annotationProcessor "android.arch.lifecycle:compiler:$lifecycleVersion" // use kapt for Kotlin
 
     // alternately - if using Java8, use the following instead of compiler
-    api "android.arch.lifecycle:common-java8:$lifecycleVersion"
+    //api "android.arch.lifecycle:common-java8:$lifecycleVersion"
+
+    // ViewModel
+    api "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
+
+    // LiveData
+    api "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version"
 
     // optional - ReactiveStreams support for LiveData
     implementation "android.arch.lifecycle:reactivestreams:$lifecycleVersion"

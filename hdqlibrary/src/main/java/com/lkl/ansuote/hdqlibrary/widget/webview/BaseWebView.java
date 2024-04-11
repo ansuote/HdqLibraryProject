@@ -51,7 +51,8 @@ public abstract class BaseWebView extends WebView {
             mSettings.setBuiltInZoomControls(true);
             mSettings.setDisplayZoomControls(false);
             // 启动应用缓存
-            mSettings.setAppCacheEnabled(true);
+            // sdk>=33(android 13) remove setAppCachePath Method
+            //mSettings.setAppCacheEnabled(true);
             // 设置缓存模式
             mSettings.setCacheMode(WebSettings.LOAD_DEFAULT);
             // setDefaultZoom  api19被弃用
