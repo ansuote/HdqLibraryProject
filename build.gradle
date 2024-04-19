@@ -73,7 +73,7 @@ ext {
     javaxVersion = '10.0-b28'
     butterknifeVersion = '8.5.1'
     lottieVersion = '2.3.0'
-    constraintVersion = '1.0.2'
+    constraintVersion = '1.1.3'
     ByeBurgerVersion = '1.2.3'
     aviVersion = '2.1.3'
     smartrefreshVersion = '1.0.5.1'
@@ -84,7 +84,6 @@ ext {
     utilcodeVersion = '1.23.6' //1.9.3 //1.22.1
     fastjsonVersion = '1.1.64.android'
     permissionVersion = '1.1.0'
-    constraintVersion = '1.0.2'
     cymChadVersion = '2.9.28'
     //Test dependencies
     junitVersion = '4.12'
@@ -106,5 +105,6 @@ ext {
     tinkerVersion = '1.9.9'
     walleVersion = '1.1.6'
     lifecycle_version = '2.3.1'
+    appcompat='1.3.0'
     HOST_BASE = '\"https://ansuote.github.com/\"'
 }

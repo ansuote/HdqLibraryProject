@@ -2,8 +2,9 @@ package com.lkl.ansuote.hdqlibrary.widget.viewpager.transformer;
 
 import android.annotation.TargetApi;
 import android.os.Build;
-import android.support.v4.view.ViewPager;
 import android.view.View;
+
+import androidx.viewpager.widget.ViewPager;
 
 public class RotateYTransformer extends BasePageTransformer
 {
@@ -20,7 +21,7 @@ public class RotateYTransformer extends BasePageTransformer
         this(maxRotate, NonPageTransformer.INSTANCE);
     }
 
-    public RotateYTransformer( ViewPager.PageTransformer pageTransformer)
+    public RotateYTransformer(ViewPager.PageTransformer pageTransformer)
     {
         this(DEFAULT_MAX_ROTATE, pageTransformer);
     }

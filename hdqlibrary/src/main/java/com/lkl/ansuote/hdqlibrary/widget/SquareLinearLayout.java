@@ -2,9 +2,10 @@ package com.lkl.ansuote.hdqlibrary.widget;
 
 import android.annotation.TargetApi;
 import android.content.Context;
-import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.widget.LinearLayout;
+
+import androidx.annotation.Nullable;
 
 /**
  * 宽高相等的 LinearLayout

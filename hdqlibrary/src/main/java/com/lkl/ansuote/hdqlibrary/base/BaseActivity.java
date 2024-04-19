@@ -4,11 +4,13 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
+
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 
 /**
  * Activity 基类
+ *
  * @author huangdongqiang
  * @date 2018/3/30
  */
@@ -39,6 +41,7 @@ public class BaseActivity extends AppCompatActivity {
 
     /**
      * 开启只定界面
+     *
      * @param context
      * @param cls
      */

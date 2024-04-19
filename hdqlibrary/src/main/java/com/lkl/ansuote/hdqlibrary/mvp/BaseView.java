@@ -2,8 +2,10 @@ package com.lkl.ansuote.hdqlibrary.mvp;
 
 import android.app.Activity;
 import android.content.Context;
-import android.support.annotation.StringRes;
+//import android.support.annotation.StringRes;
 import android.widget.ImageView;
+
+import androidx.annotation.StringRes;
 
 /**
  * @author huangdongqiang

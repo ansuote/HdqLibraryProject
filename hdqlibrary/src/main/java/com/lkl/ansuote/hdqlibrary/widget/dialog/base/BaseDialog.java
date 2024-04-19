@@ -2,8 +2,8 @@ package com.lkl.ansuote.hdqlibrary.widget.dialog.base;
 
 import android.app.Dialog;
 import android.content.Context;
-import android.support.annotation.LayoutRes;
-import android.support.annotation.StyleRes;
+//import android.support.annotation.LayoutRes;
+//import android.support.annotation.StyleRes;
 import android.util.DisplayMetrics;
 import android.view.Display;
 import android.view.Gravity;
@@ -11,6 +11,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+
+import androidx.annotation.LayoutRes;
+import androidx.annotation.StyleRes;
 
 import com.lkl.ansuote.hdqlibrary.R;
 

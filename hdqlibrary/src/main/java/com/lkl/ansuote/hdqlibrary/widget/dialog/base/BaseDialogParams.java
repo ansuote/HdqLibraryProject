@@ -1,8 +1,10 @@
 package com.lkl.ansuote.hdqlibrary.widget.dialog.base;
 
 import android.content.Context;
-import android.support.annotation.StyleRes;
+//import android.support.annotation.StyleRes;
 import android.view.View;
+
+import androidx.annotation.StyleRes;
 
 /**
  * Created by huangdongqiang on 10/08/2017.

@@ -1,8 +1,10 @@
 package com.lkl.ansuote.hdqlibrary.mvp.fragment;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
+//import android.support.annotation.Nullable;
 import android.view.View;
+
+import androidx.annotation.Nullable;
 
 import com.lkl.ansuote.hdqlibrary.mvp.IBaseFragmentView;
 import com.lkl.ansuote.hdqlibrary.widget.fragment.BaseHFragment;

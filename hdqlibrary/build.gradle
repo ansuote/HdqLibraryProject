@@ -13,7 +13,7 @@ android {
         versionCode 1
         versionName rootProject.ext.hdqLibraryVersionName
 
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
         android.buildFeatures.buildConfig true
 //        jackOptions {
 //            enabled true
@@ -46,13 +46,9 @@ android {
 //}
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0'
 
     //base
-    api "com.android.support:support-v4:$rootProject.supportLibraryVersion"
-    api "com.android.support:design:$rootProject.supportLibraryVersion"
-    api "com.android.support:appcompat-v7:$rootProject.supportLibraryVersion"
-    api "com.android.support:support-v13:$rootProject.supportLibraryVersion"
 
     //test
     api "junit:junit:$rootProject.junitVersion"
@@ -60,7 +56,7 @@ dependencies {
     //CymChad
     //在外层 bulid.gradle 的 allprojects -> repositories ->
     //还需要设置maven { url "https://jitpack.io" }
-    api "com.android.support.constraint:constraint-layout:$rootProject.constraintVersion"
+    api "androidx.constraintlayout:constraintlayout:$rootProject.constraintVersion"
     api "com.github.CymChad:BaseRecyclerViewAdapterHelper:$rootProject.cymChadVersion"
 
     //通用工具类
@@ -148,36 +144,15 @@ dependencies {
     //状态栏
     api 'com.github.zackratos.ultimatebar:ultimatebar2:2.0.0'
 
-    // ----------------- Pre-AndroidX -----------------
-    // ViewModel and LiveData
-    api "android.arch.lifecycle:extensions:$lifecycleVersion"
-
-    // alternatively - just ViewModel
-    api "android.arch.lifecycle:viewmodel:$lifecycleVersion" // use -ktx for Kotlin
-
-    // alternatively - just LiveData
-    api "android.arch.lifecycle:livedata:$lifecycleVersion"
-
-    // alternatively - Lifecycles only (no ViewModel or LiveData).
-    //     Support library depends on this lightweight import
-    api "android.arch.lifecycle:runtime:$lifecycleVersion"
-
-    annotationProcessor "android.arch.lifecycle:compiler:$lifecycleVersion" // use kapt for Kotlin
-
-    // alternately - if using Java8, use the following instead of compiler
-    //api "android.arch.lifecycle:common-java8:$lifecycleVersion"
-
     // ViewModel
     api "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
 
     // LiveData
     api "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version"
 
-    // optional - ReactiveStreams support for LiveData
-    implementation "android.arch.lifecycle:reactivestreams:$lifecycleVersion"
+    //appcompat
+    api "androidx.appcompat:appcompat:${appcompat}"
 
-    // optional - Test helpers for LiveData
-    testImplementation "android.arch.core:core-testing:$lifecycleVersion"
 }
 repositories {
     mavenCentral()

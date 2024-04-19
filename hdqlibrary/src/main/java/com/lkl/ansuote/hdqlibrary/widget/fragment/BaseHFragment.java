@@ -2,12 +2,13 @@ package com.lkl.ansuote.hdqlibrary.widget.fragment;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
 
 /**
  * Fragment 懒加载基类
@@ -23,6 +24,7 @@ public abstract class BaseHFragment extends Fragment {
 
     /**
      * view 已经创建完，可以设置view的属性
+     *
      * @param view
      */
     public abstract void setUpView(View view);
@@ -35,7 +37,7 @@ public abstract class BaseHFragment extends Fragment {
     /**
      * 使能懒加载
      */
-    public void enableLazyLoad(){
+    public void enableLazyLoad() {
         isLazyLoadEnabled = true;
     }
 
@@ -72,18 +74,18 @@ public abstract class BaseHFragment extends Fragment {
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         //L.e(toString() + ":onViewCreated");
-        if (!isLazyLoadEnabled){
+        if (!isLazyLoadEnabled) {
             setUpView(view);
             setUpData();
-        }else {
+        } else {
             setUpView(view);
             isViewInitialized = true;
-            if (savedInstanceState != null){
+            if (savedInstanceState != null) {
                 onRestoreInstanceState(savedInstanceState);
             }
-            if (isDataInitialized){
+            if (isDataInitialized) {
                 setUpData();
-            }else {
+            } else {
                 checkIfLoadData();
             }
         }
@@ -149,7 +151,6 @@ public abstract class BaseHFragment extends Fragment {
         super.onStop();
         //L.e(toString() + ":onStop");
     }
-
 
 
     @Override

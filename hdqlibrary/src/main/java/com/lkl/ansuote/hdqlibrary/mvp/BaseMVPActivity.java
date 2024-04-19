@@ -2,7 +2,9 @@ package com.lkl.ansuote.hdqlibrary.mvp;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
+//import android.support.annotation.Nullable;
+
+import androidx.annotation.Nullable;
 
 import com.lkl.ansuote.hdqlibrary.base.BaseActivity;
 

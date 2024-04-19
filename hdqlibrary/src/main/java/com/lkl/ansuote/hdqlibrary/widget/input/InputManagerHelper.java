@@ -4,8 +4,6 @@ package com.lkl.ansuote.hdqlibrary.widget.input;
 import android.app.Activity;
 import android.graphics.Rect;
 import android.os.Handler;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.RecyclerView;
 import android.util.TypedValue;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +11,9 @@ import android.view.ViewTreeObserver;
 import android.view.WindowManager;
 import android.widget.ScrollView;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
 
 public class InputManagerHelper {
 
@@ -206,7 +207,7 @@ public class InputManagerHelper {
             //如果界面里有actionbar则需要多向上弹起一个actionbar的高度
             TypedValue typedValue = new TypedValue();
 
-            if (activity.getTheme().resolveAttribute(android.support.v7.appcompat.R.attr.actionBarSize, typedValue, true)) {
+            if (activity.getTheme().resolveAttribute(androidx.appcompat.R.attr.actionBarSize, typedValue, true)) {
                 return TypedValue.complexToDimensionPixelSize(typedValue.data, activity.getResources().getDisplayMetrics());
             }
         }
